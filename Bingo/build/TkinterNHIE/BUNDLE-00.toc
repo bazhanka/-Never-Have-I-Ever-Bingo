@@ -1,0 +1,4 @@
+([('TkinterNHIE',
+   '/Users/bazhanka/Yandex.Disk.localized/Компьютер '
+   'WIN-E4U4NN5U4CU/Загрузки/GB/pythonProject/Bingo/dist/TkinterNHIE',
+   'EXECUTABLE')],)
