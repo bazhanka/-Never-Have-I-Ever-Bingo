@@ -44,9 +44,9 @@ class Base_Window:
         self.entry.place(x=390, y=250)
 
         GAMES = []
-        dir_name = os.path.join(get_base_path(),'TkinterNHIE')
+        self.dir_name = os.path.join(get_base_path(),'TkinterNHIE')
             #"/Users/bazhanka/Yandex.Disk.localized/Компьютер WIN-E4U4NN5U4CU/Загрузки/GB/pythonProject/Bingo"
-        self.test = os.listdir(dir_name)
+        self.test = os.listdir(self.dir_name)
         for item in self.test:
             if item.endswith(".txt"):
                 GAMES.append(item)
@@ -148,6 +148,8 @@ class Base_Window:
                   while output_file in self.test:
                       output_file = self.list_of_games.get().translate({ord(i): None for i in '.txt'}) + f'({count})'+".pptx"
                       count+=1
+                  input_file = os.path.join(self.dir_name, input_file)
+                  output_file = os.path.join(self.dir_name, output_file)
                   GamePresent(inch, input_file, output_file).generate_table()
                   win = LetsPlay(input_file)
             except ValueError:
